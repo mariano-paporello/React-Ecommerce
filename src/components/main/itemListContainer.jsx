@@ -1,7 +1,18 @@
+import ItemCount from "./ItemCount.jsx";
 const ItemListContainer = () => {
     return ( 
         <div className="mainPart">
-            <p><h2>Here will be the products</h2></p>
+            <div className="card">
+                <div>
+                    <h2>
+                        <p>Here will be the products</p>
+                    </h2>
+                </div>
+                <div className="itemCountCss">
+                    <h3>Here is the Item counter</h3>
+                    <ItemCount stock={5} initial={1} />
+                </div>
+            </div>
         </div>
      );
 }
