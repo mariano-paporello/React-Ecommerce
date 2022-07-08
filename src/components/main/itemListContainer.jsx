@@ -1,21 +1,14 @@
-import ItemCount from "./ItemCount.jsx";
+import ItemCard from "./ItemCard";
+import items from "./stock.json"
 const ItemListContainer = () => {
-    function adding(count){
-        alert(`Se agregaron ${count} productos al carrito`)
-    }
     return ( 
         <div className="mainPart">
-            <div className="card">
-                <div>
-                    <h2>
-                        <p>Here will be the products</p>
-                    </h2>
-                </div>
-                <div className="itemCountCss">
-                    <h3>Here is the Item counter</h3>
-                    <ItemCount stock={5} initial={1} onAdd={adding} />
-                </div>
-            </div>
+            {items.map((item)=>{
+                
+                return <div className="card">
+                    <ItemCard key={item.id} img={item.img} name={item.name} price={item.price} info={item.info} stock={item.stock}/>
+                    </div>
+            })}
         </div>
      );
 }

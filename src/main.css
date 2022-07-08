@@ -67,18 +67,34 @@
 }
 
 .mainPart {
-  display: inline-flex;
+  display: flex;
   color: black;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: grey;
   gap: 20px;
+  padding: 20px;
 }
 
 .card {
   background-color: rgb(185, 183, 183);
   border-radius: 5px;
   padding: 10px;
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 250px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.itemCard{
+  align-items: center;
+  justify-content: center;
+}
+.itemCard div {
+  justify-content: center;
 }
 
 .itemCountCss {
