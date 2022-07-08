@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+        "img": "../../images/overlordVol1.jpg",
+      "name": "Overlord Vol.1",
+      "price": 600,
+      "info" : "Las aventuras de momonga que fue transportado al mundo del juego Ygdrasill con su grandiosa guarida conocida como la gran tumba de Nazarick. ",
+      "stock": 5
+    },
+    {
+      "id": 2,
+        "img": "",
+      "name": "Evangelion Vol.1",
+      "price": 550,
+      "info" :"Las aventuras de Shinji y Ray a bordo de los prototipo de Eva, dispuestos a enfrentarse a los malvados ángeles que quieren destruir el mundo.",
+      "stock": 2
+    },
+    {
+      "id": 3,
+        "img": "",
+      "name": "Spy X Family Vol.1",
+      "price": 700,
+      "info" :" El inigualable espía conocido como Twilight es el mejor agente de Westalis que tiene una misión la cual lo obligara a formar una familia peculiar ",
+      "stock": 4
+    }, 
+    {
+      "id": 4,
+        "img": "",
+      "name": "Baki Dou Vol.2",
+      "price": 500,
+      "info" :"La historia de Baki Hanma, un joven luchador que entrena intensamente para superar a su padre Yujiro Hanma el ser mas fuerte del mundo.",
+      "stock": 6
+    },
+    {
+      "id": 5,
+        "img": "",
+      "name": "Berserker Vol.1",
+      "price": 700,
+      "info" : "La historia de Guts , un antihéroe mercenario que vaga por el mundo en solitario en búsqueda de unos seres demoníacos que antaño fueron humanos .",
+      "stock": 7
+    },
+    {
+      "id": 6,
+        "img": "",
+      "name": "One Piece Vol.1",
+      "price": 860,
+      "info" :"Un joven llamado Monkey D. Luffy jura convertirse en el Rey de los Piratas, accidentalmente come la fruta Gomu Gomu y un tiempo despues se embarca a cumplir su sueño.",
+      "stock": 12
+    },
+    {
+      "id": 7,
+        "img": "",
+      "name": "Fire Force Vol.27",
+      "price": 780,
+      "info" :"La ciudad de Tokio está plagada de un fenómeno mortal: la Combustión Humana Espontánea . Afortunadamente, un equipo especial está allí para apagar el infierno: ¡The Fire Force !",
+      "stock": 4
+    },
+    {
+      "id": 8,
+        "img": "",
+      "name": "Chainsaw Man Vol.9",
+      "price": 690,
+      "info" :"Denji es un joven atrapado en la pobreza,trabaja como cazador de demonios, con la ayuda de Pochita, su compañero canino, el Demonio de la Motosierra. ",
+      "stock": 10
+    },
+    {
+      "id": 9,
+        "img": "",
+      "name": "My Hero Academia Vol.33",
+      "price": 900,
+      "info" :"Después de salvar a un matón de las garras de un villano, un estudiante corriente recibe un superpoder que le permite estudiar en una academia para héroes.",
+      "stock": 5
+    }
+]
+  
