@@ -17,9 +17,11 @@ const ItemCard = (props) => {
                 <div className="itemCountCss">
                     <ItemCount stock={props.stock} initial={1} onAdd={adding} />
                 </div>
-                <hr />
-                <p>Stock disponible:{props.stock}</p>
             </div>
+            <hr />
+            <div className="cardFooter">
+                <p>Stock disponible:{props.stock}</p>
+                </div>
         </div>
      );
 }

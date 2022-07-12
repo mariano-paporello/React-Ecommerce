@@ -7,8 +7,8 @@ const ItemListContainer = () => {
         for (let i = 0; i < amount; i++) {
           db.push({
             id: i,
-            name: faker.commerce.productName(),
-            description: faker.commerce.productDescription(),
+            name: faker.commerce.product(),
+            info: faker.commerce.productDescription(),
             img: faker.image.image(),
             price: faker.random.numeric(3),
             stock: faker.random.numeric(1)
@@ -26,7 +26,7 @@ const ItemListContainer = () => {
           }, 1000);
         })
         itemsPromise.then((response) => {
-          setItems(seedDB(50))
+          response = setItems(seedDB(20))
   
         }).catch((error) => {
           console.error(error)
