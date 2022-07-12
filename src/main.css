@@ -75,6 +75,10 @@
   background-color: grey;
   gap: 20px;
   padding: 20px;
+
+}
+.imageOfCard {
+  height: 100px;
 }
 
 .card {
@@ -87,6 +91,13 @@
   min-height: 100px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+
+
+
+.textPartCard{
+  text-align: center;
 }
 
 .itemCard{

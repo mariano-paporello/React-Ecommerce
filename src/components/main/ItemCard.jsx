@@ -6,20 +6,19 @@ const ItemCard = (props) => {
     }
     return ( 
         <div className="itemCard">
-            <div>
-                <picture> <img src={props.img} alt="" /></picture>
+            <div className="imagePartCard">
+                 <picture> <img className="imageOfCard" src={props.img} alt="" /></picture> 
             </div>
-            <div>
-                <h5>{props.name}</h5>
+            <div className="textPartCard">
+                <h4>{props.name}</h4>
                 <p>{props.info}</p>
-                <h6>${props.price}</h6>
+                <h5>${props.price}</h5>
                 <button>More info</button>
                 <div className="itemCountCss">
                     <ItemCount stock={props.stock} initial={1} onAdd={adding} />
                 </div>
                 <hr />
                 <p>Stock disponible:{props.stock}</p>
-
             </div>
         </div>
      );
