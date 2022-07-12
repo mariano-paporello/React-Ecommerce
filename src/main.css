@@ -75,6 +75,11 @@
   background-color: grey;
   gap: 20px;
   padding: 20px;
+  align-items: stretch;
+
+}
+.imageOfCard {
+  height: 100px;
 }
 
 .card {
@@ -82,16 +87,34 @@
   border-radius: 5px;
   padding: 10px;
   min-width: 200px;
-  max-width: 400px;
-  max-height: 250px;
+  max-width: 300px;
   min-height: 100px;
   display: flex;
   justify-content: center;
+  
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cardFooter{
+  display: flex;
+  justify-content: center;
+}
+
+.imagePartCard{
+  display: flex;
+  justify-content: center;
+}
+
+.textPartCard{
+  text-align: center;
 }
 
 .itemCard{
   align-items: center;
   justify-content: center;
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 0.5%;
 }
 .itemCard div {
   justify-content: center;
