@@ -24,6 +24,9 @@ const ItemCount = (props) => {
                     <span className="itemCounterNumber">{count}</span>
                     <button  onClick={adding}  className="itemCounterButton">+</button>
                 </span>
+                <div className="stockShow">
+                <p>Stock disponible:{props.stock}</p>
+                </div>
             </div>
             <div onClick={handleAddToCart} className="agregarAlCarrito">
                 <button> Agregar al carrito</button>

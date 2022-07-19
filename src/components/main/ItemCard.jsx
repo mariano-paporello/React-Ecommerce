@@ -1,9 +1,7 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 const ItemCard = (props) => {
-    function adding(count){
-        alert(`Se agregó ${props.name} en una cantidad de ${count} al carrito`)
-    }
+    <Link to={"/category/cocktail"}>Cocktails</Link>
     return ( 
         <div className="itemCard">
             <div className="imagePartCard">
@@ -11,12 +9,11 @@ const ItemCard = (props) => {
             </div>
             <div className="textPartCard">
                 <h4>{props.name}</h4>
-                <p>{props.info}</p>
                 <h5>${props.price}</h5>
-                <button>More info</button>
-                <div className="itemCountCss">
-                    <ItemCount stock={props.stock} initial={1} onAdd={adding} />
+                <div className="infoButtonDiv">
+                <Link to={`/item/${props.id}`}><button className="moreInfoButton">More info</button></Link>
                 </div>
+                
             </div>
             <hr />
             <div className="cardFooter">

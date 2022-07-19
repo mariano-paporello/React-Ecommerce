@@ -1,17 +1,33 @@
 import React from 'react'
 import cart from '../cart.png';
 import CartWidget from './cartWidget'
+import {Link} from "react-router-dom"
 export default function nav() {
   return (
-    <div className='divStyle'> 
-    <h1 className='h1Style'>E-commerce</h1>
-    <ul className='ulStyle'>
-  <li className='liStyle'><a className='aStyle' href="#Inicio">Inicio</a></li>
-  <li className='liStyle'><a className='aStyle' href="#Productos">Productos</a></li>
-  <li className='liStyle'><a className='aStyle' href="#Contactanos">Contactanos</a></li>
-  <li className='liStyle'><a className='aStyle' href="#Sobre Nosotros">Sobre Nosotros</a></li>
-  <li className='liStyle'><a className='aStyle cartImage' href="#carrito">{CartWidget(cart)}0</a> </li>
-</ul>
-</div>
+    <div className='divStyle'>
+      <h1 className='h1Style'>Corte Drinks</h1>
+      <ul className='ulStyle'>
+        <li className='liStyle'>
+          <Link to={"/"} className='aStyle'>Home</Link>
+        </li>
+        <li className='liStyle dropdown'>
+          <Link to={"/"} className='aStyle '>Categories</Link>
+          <div className='dropdownContent'>
+            <Link to={"/category/cocktail"}>Cocktails</Link>
+            <Link to={"/category/ordinary"}>Ordinary</Link>
+            <Link to={"/category/familyFriendly"}>Family Friendly</Link>
+          </div>
+        </li>
+        <li className='liStyle'>
+          <Link to={"/contactUs"} className='aStyle'>Contact Us</Link>
+        </li>
+        <li className='liStyle'>
+          <Link to={"/aboutUs"} className='aStyle'>About Us</Link>
+        </li>
+        <li className='liStyle'>
+          <Link to={"/cart"} className='aStyle cartImage'>{CartWidget(cart)}0</Link>
+        </li>
+      </ul>
+    </div>
   )
 }
