@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 export default function nav() {
   return (
     <div className='divStyle'>
-      <h1 className='h1Style'>Corte Drinks</h1>
+      <h1 className='h1Style'><Link to={"/"}>Corte Drinks</Link></h1>
       <ul className='ulStyle'>
         <li className='liStyle'>
           <Link to={"/"} className='aStyle'>Home</Link>

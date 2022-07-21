@@ -6,7 +6,9 @@
   text-decoration: none;
   list-style: none;
 }
-
+a{
+  color: #760003;
+}
 
 /* Estilos de el scrollbar  */
 html::-webkit-scrollbar {
@@ -138,9 +140,6 @@ li.dropdown:hover {
   display: flex;
   justify-content: center;
   overflow: hidden;
-}
-.detailPart{
-  
 }
 
 .cardFooter{
