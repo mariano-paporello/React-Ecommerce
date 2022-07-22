@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = (props) => {
-    function adding(count){
-        alert(`Se agregó ${props.name} en una cantidad de ${count} al carrito`)
+    function adding(amount){
+        setAmount(amount)
     }
+    const [amount, setAmount] = useState(0)
     const [allIngredients, setIngredients]= useState([])
     const [allMeasures, setMeasures]= useState([])
     const ingredientPromise = new Promise((resolve, reject) => {
@@ -66,7 +68,13 @@ const ItemDetail = (props) => {
             </div>
             <div className="itemCountCss">
                 <>Price:${props.price}</>
-                 <ItemCount stock={props.stock} initial={1} onAdd={adding} />
+                {amount === 0 ? 
+                (<ItemCount stock={props.stock} initial={1} onAdd={adding} />
+                ) : 
+                (<><h4 className="addingPop"> {amount} {props.name} will be added to the cart.
+                </h4> 
+                </>
+                )}
              </div>
         </div>
      </div>
