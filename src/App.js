@@ -1,10 +1,10 @@
-import ItemListContainer from './components/main/itemListContainer';
-import FooterBar from './components/footerBar';
+import ItemListContainer from './components/main/ItemListContainer';
+import FooterBar from './components/FooterBar';
 import './main.css';
-import NavBar from "./components/navBar"
+import NavBar from "./components/NavBar"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import ItemDetailContainer from './components/main/ItemDetailContainer';
-import Cart from './components/cart';
+import Cart from './components/Cart';
 
 function App() {
   return (
