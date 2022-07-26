@@ -1,4 +1,4 @@
-import ItemDetail from "./itemDetail";
+import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import Drinks from "./products.json"

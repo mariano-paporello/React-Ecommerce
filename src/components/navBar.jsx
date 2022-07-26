@@ -1,6 +1,6 @@
 import React from 'react'
 import cart from '../cart.png';
-import CartWidget from './cartWidget'
+import CartWidget from './CartWidget'
 import {Link} from "react-router-dom"
 export default function nav() {
   return (

@@ -1,7 +1,7 @@
-import ItemCard from "./ItemCard";
 import Drinks from "./products.json"
 import React,{useState, useEffect} from "react";
 import {useParams} from "react-router-dom"
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
     const category = useParams();
@@ -38,11 +38,7 @@ const ItemListContainer = () => {
 
     return ( 
         <div className="mainPart">
-            {items.map((item)=>{ 
-                return <div className="card">
-                    <ItemCard id={item.idDrink} img={item.drinkImg} name={item.nameDrink} price={item.price} stock={item.stock}/>
-                    </div>
-            })}
+          <ItemList items={items} />  
         </div>
      );
 }
