@@ -4,15 +4,14 @@ import React, {createContext, useState} from "react";
 export const CartContext = createContext();
 const CartProvider = (props) => {
     const [cartProducts, setCartProducts]= useState([]);
-    const addItem=(item, quantity)=>{
+    const addItem=({item, quantity})=>{
         let index = existInCart(item.idDrink)
         console.log(index)
         console.log(item.idDrink)
         if(index !== -1){
             const FinalCart = cartProducts;
-            FinalCart[index].qty+=1
             console.log(FinalCart[index].qty)
-            // FinalCart[index].qty+=quantity;
+            FinalCart[index].qty += quantity;
             setCartProducts(FinalCart)
         }
         else{
