@@ -21,7 +21,6 @@ const ItemDetail = (props) => {
         setTimeout(()=>{
             resolve(props.measures)
         }, 0)
-        
     })
 
     useEffect(() => {

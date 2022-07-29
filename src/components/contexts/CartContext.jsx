@@ -11,7 +11,6 @@ const CartProvider = (props) => {
             console.log(quantity)
             console.log(cartProducts[index])
             setCartProducts(cartProducts)
-    
         }
         else{
             setCartProducts((prevState)=>[...prevState, {...item,"qty":quantity}])
