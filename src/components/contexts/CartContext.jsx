@@ -6,16 +6,15 @@ const CartProvider = (props) => {
     const [cartProducts, setCartProducts]= useState([]);
     const addItem=({item, quantity})=>{
         let index = existInCart(item.idDrink)
-        console.log(index)
-        console.log(item.idDrink)
-        if(index !== -1){
-            const FinalCart = cartProducts;
-            console.log(FinalCart[index].qty)
-            FinalCart[index].qty += quantity;
-            setCartProducts(FinalCart)
+        if(index > -1){
+            cartProducts[index].qty += quantity;
+            console.log(quantity)
+            console.log(cartProducts[index])
+            setCartProducts(cartProducts)
+    
         }
         else{
-            setCartProducts((prevState)=>[...prevState, item])
+            setCartProducts((prevState)=>[...prevState, {...item,"qty":quantity}])
         }
      }
      const existInCart = (id)=>{return cartProducts.findIndex(e=>{ return e.idDrink === id ? true : false })}
