@@ -2,7 +2,7 @@ import React from 'react'
 import cart from '../cart.png';
 import CartWidget from './CartWidget'
 import {Link} from "react-router-dom"
-export default function nav() {
+const NavBar=() =>{
   return (
     <div className='divStyle'>
       <h1 className='h1Style'><Link to={"/"}>Corte Drinks</Link></h1>
@@ -31,3 +31,4 @@ export default function nav() {
     </div>
   )
 }
+export default NavBar

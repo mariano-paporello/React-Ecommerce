@@ -5,11 +5,12 @@ import NavBar from "./components/NavBar"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import ItemDetailContainer from './components/main/ItemDetailContainer';
 import Cart from './components/Cart';
+import CartProvider from './components/contexts/CartContext';
 
 function App() {
   return (
     <div className='bodyStyle'>
-    
+    <CartProvider>
     <BrowserRouter>
     <NavBar />
       <Routes>
@@ -24,7 +25,7 @@ function App() {
       </Routes>
       <FooterBar/>
     </BrowserRouter>
-    
+    </CartProvider>
     </div>
   );
 }

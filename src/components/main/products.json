@@ -34,8 +34,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":5,
-                "price":665
-                
+                "price":665,
+                "qty":0
            
     },
     {
@@ -81,8 +81,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":6,
-                "price":450
-           
+                "price":450,
+               "qty":0
     },
     {
         
@@ -126,8 +126,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":7,
-                "price":820
-           
+                "price":820,
+                "qty":0
     },
     {
         
@@ -171,8 +171,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":5,
-                "price":774
-                
+                "price":774,
+                "qty":0
            
     },
     {
@@ -219,8 +219,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":3,
-                "price":814
-               
+                "price":814,
+               "qty":0
            
     },
     {
@@ -266,8 +266,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":7,
-                "price":961
-              
+                "price":961,
+              "qty":0
            
     },
     {
@@ -313,8 +313,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":11,
-                "price":837
-                
+                "price":837,
+                "qty":0
            
     },
     {
@@ -359,8 +359,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":4,
-                "price":905
-            
+                "price":905,
+            "qty":0
            
     },
     {
@@ -404,8 +404,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":2,
-                "price":696
-                
+                "price":696,
+                "qty":0
            
     },
     {
@@ -450,8 +450,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":8,
-                "price":775
-                
+                "price":775,
+                "qty":0
             
     },
     {
@@ -495,8 +495,8 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":9,
-                "price":560
-              
+                "price":560,
+              "qty":0
            
     },
     {
@@ -543,7 +543,7 @@
                 "strMeasure14": null,
                 "strMeasure15": null,
                 "stock":6,
-                "price":887
-
+               "price":887,
+               "qty":0
     }
 ]

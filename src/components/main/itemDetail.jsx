@@ -1,19 +1,22 @@
-import React, {useEffect, useState} from "react";
-import { Link } from "react-router-dom";
+import React, {useContext, useEffect, useState} from "react";
 import ItemCount from "./ItemCount";
+import { CartContext } from "../contexts/CartContext";
 
 const ItemDetail = (props) => {
+    const cartProducts = useContext(CartContext);
     function adding(amount){
-        setAmount(amount)
+        setAmount(amount);
+        cartProducts.addItem(props.item, amount);
+        console.log(cartProducts)
     }
-    const [amount, setAmount] = useState(0)
-    const [allIngredients, setIngredients]= useState([])
-    const [allMeasures, setMeasures]= useState([])
+    const [amount, setAmount] = useState(0);
+    const [allIngredients, setIngredients]= useState([]);
+    const [allMeasures, setMeasures]= useState([]);
     const ingredientPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
         resolve(props.ingredients)
         }, 0);
-    })
+    });
     const measuresPromise = new Promise((resolve, reject) => {
         setTimeout(()=>{
             resolve(props.measures)
@@ -23,9 +26,9 @@ const ItemDetail = (props) => {
 
     useEffect(() => {
       ingredientPromise.then((response)=>{
-        console.log("recibí ingredientes")
-        setIngredients(response)
-      })
+        console.log("recibí ingredientes");
+        setIngredients(response);
+      });
       measuresPromise.then((response)=>{
         console.log("recibí cantidades")
         setMeasures(response)
@@ -38,7 +41,9 @@ const ItemDetail = (props) => {
         <div className="detailCard">
             <div className="detailTitle">
                 <h2>{props.name}</h2>
+                <hr />
             </div>
+            
             <div className="detailImg">
                 <img className="imgDetailPart" src={props.img} alt="" />
             </div>
