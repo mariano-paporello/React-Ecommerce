@@ -6,8 +6,8 @@ const ItemDetail = (props) => {
     const cartProducts = useContext(CartContext);
     function adding(amount){
         setAmount(amount);
+        console.log(amount)
         cartProducts.addItem(props.item, amount);
-        console.log(cartProducts)
     }
     const [amount, setAmount] = useState(0);
     const [allIngredients, setIngredients]= useState([]);

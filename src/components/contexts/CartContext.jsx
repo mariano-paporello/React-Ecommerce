@@ -10,14 +10,16 @@ const CartProvider = (props) => {
         console.log(item.idDrink)
         if(index !== -1){
             const FinalCart = cartProducts;
-            FinalCart[index].qty+=quantity;
+            FinalCart[index].qty+=1
+            console.log(FinalCart[index].qty)
+            // FinalCart[index].qty+=quantity;
             setCartProducts(FinalCart)
         }
         else{
             setCartProducts((prevState)=>[...prevState, item])
         }
      }
-     const existInCart = (id)=>{return cartProducts.findIndex(e=>{ return e.id === id ? true : false })}
+     const existInCart = (id)=>{return cartProducts.findIndex(e=>{ return e.idDrink === id ? true : false })}
     
     return ( 
         <CartContext.Provider value={{cartProducts, setCartProducts,addItem,existInCart}}> 
