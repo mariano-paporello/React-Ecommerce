@@ -1,12 +1,12 @@
 import React, {useContext, useEffect, useState} from "react";
 import ItemCount from "./ItemCount";
 import { CartContext } from "../contexts/CartContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (props) => {
     const cartProducts = useContext(CartContext);
     function adding(amount){
         setAmount(amount);
-        console.log(amount)
         cartProducts.addItem({item:props.item, quantity:amount});
     }
     const [amount, setAmount] = useState(0);
@@ -75,8 +75,8 @@ const ItemDetail = (props) => {
                 {amount === 0 ? 
                 (<ItemCount stock={props.stock} initial={1} onAdd={adding} />
                 ) : 
-                (<><h4 className="addingPop"> {amount} {props.name} will be added to the cart.
-                </h4> 
+                (<><Link to={"/cart"}><h4 className="addingPop"> {amount} {props.name} will be added to the cart.
+                </h4> </Link>
                 </>
                 )}
              </div>

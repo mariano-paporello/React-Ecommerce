@@ -17,12 +17,28 @@ const CartProvider = (props) => {
         }
      }
      const existInCart = (id)=>{return cartProducts.findIndex(e=>{ return e.idDrink === id ? true : false })}
-    
+     const deleteProduct = (itemid)=>{
+        console.log("Se esta borrando un producto seleccionado")
+        setCartProducts(cartProducts.filter((element)=> element.idDrink !== itemid))
+     }
+     const clear = () =>{
+        setCartProducts([])
+     }
+     const length = (item)=>{console.log(item.length)
+    return item.length }
     return ( 
-        <CartContext.Provider value={{cartProducts, setCartProducts,addItem,existInCart}}> 
+        <CartContext.Provider value={{cartProducts,setCartProducts,addItem,existInCart,deleteProduct,length,clear}}> 
             {props.children}
         </CartContext.Provider>
      );
 }
  
 export default CartProvider;
+
+
+
+
+
+
+
+

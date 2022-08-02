@@ -17,16 +17,12 @@ const ItemListContainer = () => {
       useEffect(() => {
         
         itemsPromise.then((response) => {
-          console.log('pedí items')
           const products = response
-
-          console.log(category.id)
 
           if(category && category.id){
              setItems(products.filter((drink)=>{ return drink.category === category.id}))
           }
           else{
-            console.log('Paso else')
             setItems(products)
           }
         }).catch((error) => {
