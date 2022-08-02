@@ -19,9 +19,6 @@ const NavBar=() =>{
           </div>
         </li>
         <li className='liStyle'>
-          <Link to={"/contactUs"} className='aStyle'>Contact Us</Link>
-        </li>
-        <li className='liStyle'>
           <Link to={"/aboutUs"} className='aStyle'>About Us</Link>
         </li>
         <li className='liStyle'>

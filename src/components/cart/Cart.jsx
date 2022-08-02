@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import { CartContext } from "./contexts/CartContext";
+import { CartContext } from "../contexts/CartContext";
 import CartItem from "./CartItem"
 import { Link } from "react-router-dom";
 const Cart = () => {
@@ -17,7 +17,7 @@ const Cart = () => {
             { cartProducts.length === 0? 
             (<div className="cartContainer">
                 <h3>There is no products in the Cart </h3>
-                <button><Link className="linkInTheCartBH" to={"/"}>Go back to Home</Link></button>
+                <button className="buttonToGoHome"><Link className="linkInTheCartBH" to={"/"}>Go back to Home</Link></button>
             </div>
             )
             : 

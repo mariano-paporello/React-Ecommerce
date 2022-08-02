@@ -4,6 +4,7 @@ const ItemCard = (props) => {
     <Link to={"/category/cocktail"}>Cocktails</Link>
     return ( 
         <div className="itemCard">
+            <Link to={`/item/${props.id}`}>
             <div className="imagePartCard">
                  <picture> <img className="imageOfCard" src={props.img} alt="" /></picture> 
             </div>
@@ -11,14 +12,15 @@ const ItemCard = (props) => {
                 <h4>{props.name}</h4>
                 <h5>${props.price}</h5>
                 <div className="infoButtonDiv">
-                <Link to={`/item/${props.id}`}><button className="moreInfoButton">More info</button></Link>
+                <button className="moreInfoButton">More info</button>
                 </div>
                 
             </div>
             <hr />
             <div className="cardFooter">
                 <p>Stock disponible:{props.stock}</p>
-                </div>
+            </div>
+            </Link>
         </div>
      );
 }
