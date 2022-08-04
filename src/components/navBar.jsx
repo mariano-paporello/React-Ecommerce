@@ -13,9 +13,9 @@ const NavBar=() =>{
         <li className='liStyle dropdown'>
           <Link to={"/"} className='aStyle '>Categories</Link>
           <div className='dropdownContent'>
-            <Link to={"/category/cocktail"}>Cocktails</Link>
-            <Link to={"/category/ordinary"}>Ordinary</Link>
-            <Link to={"/category/familyFriendly"}>Family Friendly</Link>
+            <Link to={"/category/Cocktail"}>Cocktails</Link>
+            <Link to={"/category/Ordinary Drink"}>Ordinary Drinks</Link>
+            <Link to={"/category/Shot"}>Shots</Link>
           </div>
         </li>
         <li className='liStyle'>

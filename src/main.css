@@ -173,6 +173,7 @@ li.dropdown:hover {
   justify-content: center;
   display: grid;
   grid-template-rows: 1.5fr 2fr 0.5;
+  max-width: 200px;
 }
 .itemCard div {
   justify-content: center;

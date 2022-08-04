@@ -5,7 +5,7 @@ export const CartContext = createContext();
 const CartProvider = (props) => {
     const [cartProducts, setCartProducts]= useState([]);
     const addItem=({item, quantity})=>{
-        let index = existInCart(item.idDrink)
+        let index = existInCart(item.idFire)
         if(index > -1){
             cartProducts[index].qty += quantity;
             console.log(quantity)
@@ -16,10 +16,10 @@ const CartProvider = (props) => {
             setCartProducts((prevState)=>[...prevState, {...item,"qty":quantity}])
         }
      }
-     const existInCart = (id)=>{return cartProducts.findIndex(e=>{ return e.idDrink === id ? true : false })}
+     const existInCart = (id)=>{return cartProducts.findIndex(e=>{ return e.idFire === id ? true : false })}
      const deleteProduct = (itemid)=>{
         console.log("Se esta borrando un producto seleccionado")
-        setCartProducts(cartProducts.filter((element)=> element.idDrink !== itemid))
+        setCartProducts(cartProducts.filter((element)=> element.idFire !== itemid))
      }
      const clear = () =>{
         setCartProducts([])
