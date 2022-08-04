@@ -1,37 +1,45 @@
-import Drinks from "./products.json"
+
 import React,{useState, useEffect} from "react";
 import {useParams} from "react-router-dom"
 import ItemList from "./ItemList";
+import {getDocs, collection, getFirestore, query, where, limit} from "firebase/firestore"
 
 const ItemListContainer = () => {
     const category = useParams();
       let [items, setItems] = useState([])
 
-      let itemsPromise = new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(Drinks)
-          
-        }, 700);
-      })
 
-      useEffect(() => {
+      useEffect(() => { 
+       
+            if(category && category.id){
+              const db = getFirestore();
+              const docCollection = collection(db, "drinks_db")
+              const filteredCollection = query(
+                docCollection,
+                where("category","==", category.id),
+                limit(10)
+              )
+              getDocs(filteredCollection).then((snapshot)=>{
+                const data = snapshot.docs.map(doc=> (
+                  {idFire: doc.id,
+                  ...doc.data()}
+                  ))
+               setItems(data) 
+              })
+           }
+           else{
+            const db = getFirestore();
+            const docCollection = collection(db, "drinks_db")
+            getDocs(docCollection).then((snapshot)=>{
+              const data = snapshot.docs.map(doc=> (
+                {idFire: doc.id,
+                ...doc.data()}
+                ))
+             setItems(data)
+            })
+           }
         
-        itemsPromise.then((response) => {
-          console.log('pedí items')
-          const products = response
-
-          console.log(category.id)
-
-          if(category && category.id){
-             setItems(products.filter((drink)=>{ return drink.category === category.id}))
-          }
-          else{
-            console.log('Paso else')
-            setItems(products)
-          }
-        }).catch((error) => {
-          console.error(error)
-        })
+        
        
       }, [category])
       

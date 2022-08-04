@@ -1,31 +1,34 @@
-import React, {useEffect, useState} from "react";
-import { Link } from "react-router-dom";
+import React, {useContext, useEffect, useState} from "react";
 import ItemCount from "./ItemCount";
+import { CartContext } from "../contexts/CartContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (props) => {
+    const cartProducts = useContext(CartContext);
     function adding(amount){
-        setAmount(amount)
+        setAmount(amount);
+        cartProducts.addItem({item:props.item, quantity:amount});
     }
-    const [amount, setAmount] = useState(0)
-    const [allIngredients, setIngredients]= useState([])
-    const [allMeasures, setMeasures]= useState([])
+    const [amount, setAmount] = useState(0);
+    const [allIngredients, setIngredients]= useState([]);
+    const [allMeasures, setMeasures]= useState([]);
     const ingredientPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
         resolve(props.ingredients)
         }, 0);
-    })
+    });
     const measuresPromise = new Promise((resolve, reject) => {
         setTimeout(()=>{
             resolve(props.measures)
         }, 0)
-        
     })
 
     useEffect(() => {
       ingredientPromise.then((response)=>{
-        console.log("recibí ingredientes")
-        setIngredients(response)
-      })
+        console.log("recibí ingredientes");
+        setIngredients(response);
+        console.log(allIngredients)
+      });
       measuresPromise.then((response)=>{
         console.log("recibí cantidades")
         setMeasures(response)
@@ -38,7 +41,9 @@ const ItemDetail = (props) => {
         <div className="detailCard">
             <div className="detailTitle">
                 <h2>{props.name}</h2>
+                <hr />
             </div>
+            
             <div className="detailImg">
                 <img className="imgDetailPart" src={props.img} alt="" />
             </div>
@@ -47,18 +52,18 @@ const ItemDetail = (props) => {
                 <div className="ingredients"><h3>Ingredients</h3>
                  <ul className="ulIngredients">
                     {
-                    allIngredients.map((ingredient)=>{
-                        return <li className="ingredientsLi">{ingredient}</li>
-                    })
+                    // allIngredients.map((ingredient)=>{
+                    //     return <li className="ingredientsLi">{ingredient}</li>
+                    // })
                     }
                 </ul></div>
                 <div className="measures">
                     <h3>Measures</h3>
                     <ul className="ulMeasures">
                         {
-                            allMeasures.map((measure)=>{
-                                return<li className="measuresLi"> {measure}</li>
-                            })
+                            // allMeasures.map((measure)=>{
+                            //     return<li className="measuresLi"> {measure}</li>
+                            // })
                         }
                     </ul>
                 </div>
@@ -71,8 +76,8 @@ const ItemDetail = (props) => {
                 {amount === 0 ? 
                 (<ItemCount stock={props.stock} initial={1} onAdd={adding} />
                 ) : 
-                (<><h4 className="addingPop"> {amount} {props.name} will be added to the cart.
-                </h4> 
+                (<><Link to={"/cart"}><h4 className="addingPop"> {amount} {props.name} will be added to the cart.
+                </h4> </Link>
                 </>
                 )}
              </div>

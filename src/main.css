@@ -6,6 +6,15 @@
   text-decoration: none;
   list-style: none;
 }
+.text-align-center{
+  text-align: center;
+}
+.flex{
+  display: flex;
+}
+.center{
+  justify-content: center;
+}
 a{
   color: #760003;
 }
@@ -79,6 +88,7 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   color: #760003;
   text-align: center;
+  font-weight: 600;
   text-decoration: none;
   padding: 10px;
 }
@@ -163,6 +173,7 @@ li.dropdown:hover {
   justify-content: center;
   display: grid;
   grid-template-rows: 1.5fr 2fr 0.5;
+  max-width: 200px;
 }
 .itemCard div {
   justify-content: center;
@@ -262,6 +273,9 @@ hr{
   box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.384);
   display: grid;
 }
+.detailTitle hr{
+  margin: 3px 9%;
+}
 .detailTitle{
   display: block;
 padding: 6px 0px ;
@@ -309,12 +323,96 @@ font-weight: bolder;
 .imgDetailPart{
   max-width: 200px;
   max-height: 500px;
+  border-radius: 5px;
+}
+.backgroundOfCart{
+  background-color: #c08b77;
+  color: #4b0506;
+}
+.cartTitle{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.backgroundOfCart hr{
+  margin: 5px 9%;
+}
+.cartContainer{
+  text-align: center;
+  padding: 5px;
+}
+.linkInTheCartBH{
+  display: block;
+padding: 10px;
+  background-color: #760003; 
+  color:#F6E1DD;
+  
+ 
+}
+.buttonToGoHome{
+  border: none;
+  border-radius: 5px;
+}
+.linkInTheCartBH:hover{
+  background-color:#4b0506;
+}
+
+.clearTheCart{
+  padding: 6px; 
+  background-color: #760003; 
+  color:#F6E1DD; 
+  border-radius: 5px;
+  border: none;
+}
+.clearTheCart:hover{
+  background-color:#4b0506;
+}
+.finishThePurcharse{
+  padding: 6px;
+  margin-left: 5px;
+  background-color: #760003;
+  color: #F6E1DD;
+  border-radius: 5px;
+  border: none;
+}
+.finishThePurcharse:hover{
+  background-color:#4b0506;
+}
+.cartProductsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: baseline;
+  
+}
+.cartPolaroids{
+  padding: 5px; 
+  background-color:#F5B49B; 
+  width: 25%; 
+  text-align: center; 
+  font-weight: 600; 
+}
+.imgInCart{
+  max-width: 300px; 
+  max-height: 200px; 
+}
+.totalToPay{
+  text-align: center; 
+  font-size:larger; 
+  padding: 10px; 
 }
 .stockShow{
-  font-weight: 400;
+  font-weight: 400; 
 }
 .addingPop{
-  padding: 10px;
-  background-color:#f5b59bbe;
+  padding: 10px; 
+  background-color:#f5b59bbe; 
+}
+.aboutUsPart{
+  background-color: #f5b59bbe; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
