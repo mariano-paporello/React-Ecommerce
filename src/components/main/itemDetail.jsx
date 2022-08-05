@@ -15,19 +15,19 @@ const ItemDetail = (props) => {
     const ingredientPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
         resolve(props.ingredients)
-        }, 0);
+        }, 500);
     });
     const measuresPromise = new Promise((resolve, reject) => {
         setTimeout(()=>{
             resolve(props.measures)
-        }, 0)
+        }, 500)
     })
 
     useEffect(() => {
       ingredientPromise.then((response)=>{
         console.log("recibí ingredientes");
         setIngredients(response);
-        console.log(allIngredients)
+        
       });
       measuresPromise.then((response)=>{
         console.log("recibí cantidades")
@@ -52,18 +52,18 @@ const ItemDetail = (props) => {
                 <div className="ingredients"><h3>Ingredients</h3>
                  <ul className="ulIngredients">
                     {
-                    // allIngredients.map((ingredient)=>{
-                    //     return <li className="ingredientsLi">{ingredient}</li>
-                    // })
+                            allIngredients.map((ingredient)=>{
+                                return <li className="ingredientsLi">{ingredient}</li>
+                            })              
                     }
                 </ul></div>
                 <div className="measures">
                     <h3>Measures</h3>
                     <ul className="ulMeasures">
                         {
-                            // allMeasures.map((measure)=>{
-                            //     return<li className="measuresLi"> {measure}</li>
-                            // })
+                            allMeasures.map((measure)=>{
+                                return<li className="measuresLi"> {measure}</li>
+                            })
                         }
                     </ul>
                 </div>
