@@ -2,7 +2,7 @@ import cart from '../cart.png';
 import React, {useContext} from 'react';
 import { CartContext } from "./contexts/CartContext";
 const CartWidget = () => {
-    const {cartProducts} = useContext(CartContext);
+    const cartProducts = useContext(CartContext);
     return ( 
         <>
         {cartProducts.length=== 0 ?(
@@ -14,7 +14,7 @@ const CartWidget = () => {
                 <img className="cartImage" src={cart} alt="Cart"/>
             </span>
             <span>
-                {cartProducts.length}
+                {cartProducts.cartProducts.length}
             </span>
         </>
         )}
