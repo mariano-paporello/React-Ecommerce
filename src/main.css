@@ -331,7 +331,9 @@ font-weight: bolder;
 .cartTitle{
   text-align: center;
   font-weight: bold;
-  margin-top: 10px;
+}
+.cartTitlePart{
+  margin: 15px 0;
 }
 .backgroundOfCart hr{
   margin: 5px 9%;

@@ -1,7 +1,20 @@
 const FooterBar = () => {
     return ( 
         <footer className="footerBar">
-            <h2><p>Here will be the footer</p></h2>
+           <div> 
+                Social Media:
+                <div></div>
+            </div>
+           <div>
+           Copyright Corte Drinks - 2022. Todos los derechos reservados. Defensa de las y los consumidores.
+           </div>
+           <div>
+                Contact Us:
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </footer>
      );
 }

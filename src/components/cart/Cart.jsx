@@ -18,8 +18,10 @@ const Cart = () => {
     });
     return ( 
     <div className="backgroundOfCart">
-    <h2 className="cartTitle"> Products in the Cart</h2>
-    <hr />
+        <div className="cartTitlePart">
+            <h2 className="cartTitle"> Products in the Cart</h2>
+            <hr />
+        </div>
         
             { cartProducts.length === 0? 
             (<div className="cartContainer">
