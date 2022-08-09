@@ -3,7 +3,7 @@ import { CartContext } from "../contexts/CartContext";
 import CartItem from "./CartItem"
 import { Link } from "react-router-dom";
 const Cart = () => {
-    const {cartProducts, clear, sendOrder, updateStock} = useContext(CartContext);
+    const {cartProducts, clear, sendOrder } = useContext(CartContext);
     const orderHandler = () =>{
         const HtmlCollectionInputs = document.getElementsByTagName("input")
         const inputsArray = Array.from(HtmlCollectionInputs)
@@ -35,8 +35,10 @@ const Cart = () => {
                     }
                 
                 </div>
-                
+                <div className="flex center infoPart">
+                <h3>Order :</h3>
                     <form  className="formInCart" action="">
+                        
                         <label htmlFor="inptName">Your full Name:</label>
                         <input type="text" id="fname" name="fname" />
                         <label  htmlFor="email">Gmail:</label>
@@ -44,11 +46,9 @@ const Cart = () => {
                         <label  htmlFor="tel">Telephone number</label>
                         <input type="tel" name="tel" id="tel"  />
                     </form>
-                
-                
-                <div className="flex center">
+                    
                    
-                    <div className="text-align-center">
+                    <div className="text-align-center endOfBuyPart">
                         <h4 className="totalToPay">The total is: ${totalPrice}.</h4>
                         <button type="reset" className="clearTheCart" onClick={()=>clear()}> Clear the Cart</button>
                         <button type="submit" className="finishThePurcharse" onClick={()=>orderHandler() }> Finish the purchase </button>

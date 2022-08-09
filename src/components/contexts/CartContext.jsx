@@ -39,8 +39,6 @@ const CartProvider = (props) => {
          Tu id de compra es: "${res.id}"`))
         .catch((error)=>console.log(error))
         const updateStock = (order)=>{
-            const db = getFirestore();
-    
             order.items.forEach((element)=>{
                 const orderQuantity = element.qty
                 const itemStock = parseInt(element.stock)

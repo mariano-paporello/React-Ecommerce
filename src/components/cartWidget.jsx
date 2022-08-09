@@ -5,7 +5,7 @@ const CartWidget = () => {
     const cartProducts = useContext(CartContext);
     return ( 
         <>
-        {cartProducts.length=== 0 ?(
+        {cartProducts.cartProducts.length=== 0 ?(
          <></>
         )
         :
