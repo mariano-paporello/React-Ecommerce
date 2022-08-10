@@ -250,11 +250,56 @@ hr{
 }
 
 .footerBar {
-  display: flex;
-  justify-content: center;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #BB7F68;
 }
+.socialMediaPart{
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  height: 100%;
+}
 
+.linksCollection{
+  display: flex;
+  flex-direction: row;
+}
+
+.socialMediaLinksDiv{
+  padding: 0px 5px;
+  
+}
+.socialMediaLinksDivBorder{
+  padding: 0px 5px;
+  border-right:#4b0506 1px solid ;
+}
+.copyRightPart{
+  text-align: center;
+  font-weight: 100;
+  align-self: center;
+}
+.ContactUsPart{
+  text-align: center;
+  justify-self: center;
+  height: 100%;
+  width: 50%;
+}
+.contactUsLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top:#4b0506 1px solid;
+  border-bottom: #4b0506 1px solid;
+  text-align: center;
+}
+.contactUsLinkBorder{
+
+  border-right: #4b0506 1px solid;
+}
+.contactUsLinks a{
+  padding: 7px;
+}
 .detailPart{
  background-color:  #F5B49B;
  text-align: center;
