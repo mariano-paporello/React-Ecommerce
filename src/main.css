@@ -120,14 +120,16 @@ li.dropdown:hover {
   display: block;
   width: 25px;
 }
-
-.mainPart {
+.mainPart{
+  background-color: #F6E1DD;
+}
+.itemList {
   display: flex;
   color: #760003;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #F6E1DD;
+  
   gap: 20px;
   padding: 20px;
   align-items: stretch;

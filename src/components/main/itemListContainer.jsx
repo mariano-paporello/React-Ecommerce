@@ -6,18 +6,24 @@ import {getDocs, collection, getFirestore, query, where, limit} from "firebase/f
 
 const ItemListContainer = () => {
     const category = useParams();
-      let [items, setItems] = useState([])
+    let [items, setItems] = useState([])
+    
+
+
+
+
+
+
 
 
       useEffect(() => { 
-       
             if(category && category.id){
               const db = getFirestore();
               const docCollection = collection(db, "drinks_db")
               const filteredCollection = query(
                 docCollection,
                 where("category","==", category.id),
-                limit(10)
+                limit(20)
               )
               getDocs(filteredCollection).then((snapshot)=>{
                 const data = snapshot.docs.map(doc=> (
@@ -46,7 +52,7 @@ const ItemListContainer = () => {
 
     return ( 
         <div className="mainPart">
-          <ItemList items={items} />  
+          <ItemList  items={items} />  
         </div>
      );
 }

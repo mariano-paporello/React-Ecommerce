@@ -11,6 +11,7 @@ const Cart = () => {
            return  element.value
         })
         sendOrder(totalPrice, {name: data[0], mail:data[1], telephone:data[2]})
+        
     }
     let totalPrice= 0;
     cartProducts.forEach(element => {

@@ -47,6 +47,7 @@ const CartProvider = (props) => {
             })
         }
         updateStock(order)
+        clear()
     }
 
     
