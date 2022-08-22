@@ -57,6 +57,7 @@ html::-webkit-scrollbar-thumb {
   padding-left: 2vw;
   color: #760003;
   align-items: center;
+  font-size:40PX;
 }
 
 .ulStyle {
@@ -89,7 +90,15 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
   font-weight: 600;
   text-decoration: none;
-  padding: 10px;
+  padding: 25px 10px;
+}
+.cartAStyle{
+  display: flex;
+  color: #760003;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 .dropdownContent {
   display: none;
@@ -122,6 +131,20 @@ li.dropdown:hover {
 }
 .mainPart{
   background-color: #F6E1DD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LoadMoreButton{
+  margin: 15px;
+}
+.LoadMoreButton button{
+  padding: 10px 20px;
+  background-color:#760003;
+  color:#F6E1DD ;
+  border: none;
+  border-radius: 5px;
 }
 .itemList {
   display: flex;

@@ -38,7 +38,7 @@ const ItemCard = (props) => {
             </div>
             <hr />
             <div className="cardFooter">
-                <p>Stock disponible:{props.stock}</p>
+                <p>Available stock:{props.stock}</p>
             </div>
             </Link>
         </div>)

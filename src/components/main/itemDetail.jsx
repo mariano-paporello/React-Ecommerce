@@ -3,6 +3,7 @@ import ItemCount from "./ItemCount";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
 
+
 const ItemDetail = (props) => {
     const cartProducts = useContext(CartContext);
     function adding(amount){
@@ -10,14 +11,14 @@ const ItemDetail = (props) => {
         cartProducts.addItem({item:props.item, quantity:amount});
     }
     const [amount, setAmount] = useState(0);
-    const [allIngredients, setIngredients]= useState([]);
-    const [allMeasures, setMeasures]= useState([]);
+    const [allIngredients, setIngredients]= useState(null);
+    const [allMeasures, setMeasures]= useState(null);
     const ingredientPromise = new Promise((resolve, reject) => {
-        resolve(props.ingredients)
+        resolve(props.item.ingredients)
     });
     const measuresPromise = new Promise((resolve, reject) => {
         
-            resolve(props.measures)
+            resolve(props.item.measures)
         
     })
     useEffect(() => {
@@ -42,26 +43,25 @@ const ItemDetail = (props) => {
             </div>
             
             <div className="detailImg">
-                <img className="imgDetailPart" src={props.item.drinkImg} alt="" />
+                {props.item.drinkImg? <img className="imgDetailPart" src={props.item.drinkImg} alt="" />:  "Loading..."}
             </div>
             <div className="preparationIngredientsMeasures">
                 <div className="ingredientsMeasures">
                 <div className="ingredients"><h3>Ingredients</h3>
                  <ul className="ulIngredients">
                 {
-                    //  allIngredients.map((ingredient)=>{
-                    //     return <li className="ingredientsLi">{ingredient}</li>
-                    // })   
+                    allIngredients? allIngredients.map((ingredient)=>{
+                        return <li className="ingredientsLi">{ingredient}</li>
+                    })   : "Loading..."
                     
                 }                   
                 </ul></div>
                 <div className="measures">
                     <h3>Measures</h3>
                     <ul className="ulMeasures">
-                        {
-                        // allMeasures.map((measure)=>{
-                        //     return<li className="measuresLi"> {measure}</li>
-                        // })
+                        {allMeasures?  allMeasures.map((measures)=>{
+                            return <li className="measuresLi">{measures}</li>
+                        }): "Loading..."
                         }
                     </ul>
                 </div>

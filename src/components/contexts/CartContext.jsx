@@ -28,7 +28,7 @@ const CartProvider = (props) => {
         setCartProducts([])
      }
 
-     const length = (item)=>{return item.length }
+     
 
     const sendOrder =(totalPrice, object)=>{
         const order = { buyer:object,  items: cartProducts, totalPrice: totalPrice}
@@ -53,7 +53,7 @@ const CartProvider = (props) => {
     
 
     return ( 
-        <CartContext.Provider value={{cartProducts,setCartProducts,addItem,existInCart,deleteProduct,length,clear, sendOrder}}> 
+        <CartContext.Provider value={{cartProducts,setCartProducts,addItem,existInCart,deleteProduct,clear, sendOrder}}> 
             {props.children}
         </CartContext.Provider>
      );
