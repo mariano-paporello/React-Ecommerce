@@ -30,8 +30,8 @@ const FooterBar = () => {
            <div className="ContactUsPart">
                 Contact Us: 
                 <div className="flex contactUsLinks">
-                    <div className="contactUsLinkBorder"> <a href="mailto:mariano.paporello@gmail.com?Subject=Duda%20o%20consulta%20porfavor%20escribanos%20por%20aqui">Gmail</a></div>
-                    <div><a href="https://wa.me/5491165551861?text=Duda%20o%20consulta%20porfavor%20escribanos%20por%20aqu%C3%AD.">WhatsApp </a></div>
+                    <div className="contactUsLinkBorder"><a href="https://wa.me/5491165551861?text=Duda%20o%20consulta%20porfavor%20escribanos%20por%20aqu%C3%AD.">WhatsApp </a> </div>
+                    <div><a href="mailto:mariano.paporello@gmail.com?Subject=Duda%20o%20consulta%20porfavor%20escribanos%20por%20aqui">Gmail</a></div>
                 </div>
             </div>
         </footer>
