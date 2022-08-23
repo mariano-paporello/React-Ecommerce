@@ -74,8 +74,10 @@ const ItemDetail = (props) => {
                 {amount === 0 ? 
                 (<ItemCount stock={props.item.stock} initial={1} onAdd={adding} />
                 ) : 
-                (<><Link to={"/cart"}><h4 className="addingPop"> {amount} {props.item.nameDrink} will be added to the cart.
-                </h4> </Link>
+                (<><h4 className="addingPop"> <p>{amount} {props.item.nameDrink} will be added to the cart.</p>
+                <Link to={"/cart"}><button className="goToCartButton">Ir al carrito</button></Link>
+                </h4>
+                
                 </>
                 )}
              </div>

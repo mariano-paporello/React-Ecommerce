@@ -255,7 +255,8 @@ li.dropdown:hover {
 }
 .agregarAlCarrito button{
   border:none;
-  padding: 2px;
+  padding: 10px;
+  border-radius: 5px;
   color:#F6E1DD;
   background-color:#760003;
   font-weight: bolder;
@@ -325,6 +326,15 @@ hr{
 }
 .contactUsLinks a{
   padding: 7px;
+}
+.goToCartButton{
+  display: inline;
+  background-color: #760003;
+  color: #F6E1DD;
+  margin-top: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
 }
 .detailPart{
  background-color:  #F5B49B;
