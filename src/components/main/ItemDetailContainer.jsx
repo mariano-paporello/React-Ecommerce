@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import {getDoc, doc , getFirestore} from "firebase/firestore"
 
+
 const ItemDetailContainer = () => {
     const  idDetails = useParams()
     let [item, setItem] = useState([])
@@ -14,12 +15,11 @@ const ItemDetailContainer = () => {
             getDoc(docDetail).then((snapshot)=>{
                 const data = {idFire: snapshot.id, ...snapshot.data()}
                 setItem(data)
-                console.log(snapshot.data())
             })
-    }, [idDetails])
+    }, [idDetails]) 
     return ( 
         <>
-            <ItemDetail item={item} key={item.idFire} img={item.drinkImg} name={item.nameDrink} price={item.price} stock={item.stock} info={item.drinkInstructions} ingredients={item.ingredients} measures={item.measures}/>
+            <ItemDetail item={item} key={item.idFire} />  
         </>
      );
 }

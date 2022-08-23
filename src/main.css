@@ -1,6 +1,4 @@
 * {
-  border-left: 20px;
-  border-right: 20px;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -15,6 +13,7 @@
 .center{
   justify-content: center;
 }
+
 a{
   color: #760003;
 }
@@ -58,6 +57,7 @@ html::-webkit-scrollbar-thumb {
   padding-left: 2vw;
   color: #760003;
   align-items: center;
+  font-size:40PX;
 }
 
 .ulStyle {
@@ -90,7 +90,15 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
   font-weight: 600;
   text-decoration: none;
-  padding: 10px;
+  padding: 25px 10px;
+}
+.cartAStyle{
+  display: flex;
+  color: #760003;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 .dropdownContent {
   display: none;
@@ -121,14 +129,30 @@ li.dropdown:hover {
   display: block;
   width: 25px;
 }
-
-.mainPart {
+.mainPart{
+  background-color: #F6E1DD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LoadMoreButton{
+  margin: 15px;
+}
+.LoadMoreButton button{
+  padding: 10px 20px;
+  background-color:#760003;
+  color:#F6E1DD ;
+  border: none;
+  border-radius: 5px;
+}
+.itemList {
   display: flex;
   color: #760003;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #F6E1DD;
+  
   gap: 20px;
   padding: 20px;
   align-items: stretch;
@@ -231,7 +255,8 @@ li.dropdown:hover {
 }
 .agregarAlCarrito button{
   border:none;
-  padding: 2px;
+  padding: 10px;
+  border-radius: 5px;
   color:#F6E1DD;
   background-color:#760003;
   font-weight: bolder;
@@ -251,11 +276,66 @@ hr{
 }
 
 .footerBar {
-  display: flex;
-  justify-content: center;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #BB7F68;
 }
+.socialMediaPart{
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  height: 100%;
+}
 
+.linksCollection{
+  display: flex;
+  flex-direction: row;
+}
+
+.socialMediaLinksDiv{
+  padding: 0px 5px;
+  
+}
+.socialMediaLinksDivBorder{
+  padding: 0px 5px;
+  border-right:#4b0506 1px solid ;
+}
+.copyRightPart{
+  text-align: center;
+  font-weight: 100;
+  align-self: center;
+}
+.ContactUsPart{
+  text-align: center;
+  justify-self: center;
+  height: 100%;
+  width: 50%;
+}
+.contactUsLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top:#4b0506 1px solid;
+  border-bottom: #4b0506 1px solid;
+  text-align: center;
+  font-size: small;
+}
+.contactUsLinkBorder{
+
+  border-right: #4b0506 1px solid;
+}
+.contactUsLinks a{
+  padding: 7px;
+}
+.goToCartButton{
+  display: inline;
+  background-color: #760003;
+  color: #F6E1DD;
+  margin-top: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+}
 .detailPart{
  background-color:  #F5B49B;
  text-align: center;
@@ -332,7 +412,9 @@ font-weight: bolder;
 .cartTitle{
   text-align: center;
   font-weight: bold;
-  margin-top: 10px;
+}
+.cartTitlePart{
+  margin: 15px 0;
 }
 .backgroundOfCart hr{
   margin: 5px 9%;
@@ -358,22 +440,24 @@ padding: 10px;
 }
 
 .clearTheCart{
-  padding: 6px; 
+  padding: 10px; 
   background-color: #760003; 
   color:#F6E1DD; 
   border-radius: 5px;
   border: none;
+  font-size:medium;
 }
 .clearTheCart:hover{
   background-color:#4b0506;
 }
 .finishThePurcharse{
-  padding: 6px;
+  padding: 10px;
   margin-left: 5px;
   background-color: #760003;
   color: #F6E1DD;
   border-radius: 5px;
   border: none;
+  font-size:medium;
 }
 .finishThePurcharse:hover{
   background-color:#4b0506;
@@ -384,9 +468,13 @@ padding: 10px;
   gap: 15px;
   justify-content: center;
   align-items: baseline;
-  
 }
 .cartPolaroids{
+  min-width: 230px;
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 350px;
+  border-radius: 10px;
   padding: 5px; 
   background-color:#F5B49B; 
   width: 25%; 
@@ -394,8 +482,8 @@ padding: 10px;
   font-weight: 600; 
 }
 .imgInCart{
-  max-width: 300px; 
-  max-height: 200px; 
+  width: 200px; 
+  height: 150px; 
 }
 .totalToPay{
   text-align: center; 
@@ -415,4 +503,29 @@ padding: 10px;
   justify-content: center; 
   align-items: center; 
 }
-
+.formInCart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}
+.infoPart{
+  background-color:#4b0506bd;
+  color: #F6E1DD;
+  margin: 4vh 10vw;
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.formInCart input{
+  color:#4b0506;
+  font-size:15px;
+}
+.infoPart h3{
+  border-bottom:rgb(190, 189, 189) solid 1px ;
+  margin-bottom: 5px;
+  font-size:x-large;
+}
+.endOfBuyPart{
+  color:#faedea;
+}

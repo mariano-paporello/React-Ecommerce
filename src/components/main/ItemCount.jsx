@@ -26,11 +26,11 @@ const ItemCount = (props) => {
                     <button  onClick={adding}  className="itemCounterButton">+</button>
                 </span>
                 <div className="stockShow">
-                <p>Stock disponible:{props.stock}</p>
+                <p>Available stock:{props.stock}</p>
                 </div>
             </div>
             <div onClick={handleAddToCart} className="agregarAlCarrito">
-                <button> Agregar al carrito</button>
+                <button> Add to the Cart</button>
             </div>
         </div>
      );
