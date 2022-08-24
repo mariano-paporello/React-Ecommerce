@@ -6,11 +6,11 @@ const ItemList = (props) => {
         items.map((item)=>{
             return item.stock === 0 
             ? 
-            (<div className="card">
+            (<div  key={item.idDrink} className="card">
                 <ItemCard id={item.idFire} img={item.drinkImg} name={item.nameDrink} price={item.price} noStock={true}/>
             </div>) 
             : (<div className="card">
-                <ItemCard id={item.idFire} img={item.drinkImg} name={item.nameDrink} price={item.price} stock={item.stock}/>
+                <ItemCard key={item.idDrink} id={item.idFire} img={item.drinkImg} name={item.nameDrink} price={item.price} stock={item.stock}/>
             </div>)
 
             
