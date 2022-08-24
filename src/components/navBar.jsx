@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import cart from '../cart.png';
 import CartWidget from './CartWidget'
 import {Link} from "react-router-dom"
 const NavBar=() =>{
+  const [search, setSearch] = useState(null)
+ const  handleChange = e =>{
+    console.log(e.target.value)
+    setSearch(e.target.value)
+  }
   return (
     <div className='divStyle'>
       <h1 className='h1Style'><Link to={"/"}> <img src="./images/drinkLogo.png" alt="" />Corte Drinks</Link></h1>
@@ -21,7 +26,9 @@ const NavBar=() =>{
             <Link to={"/category/Other"}>Other</Link>
           </div>
         </li>
-        <li className='liStyle'>
+        <li className='liInput'>
+          <input className='navInput' placeholder='Drink Name' onChange={handleChange}  />
+          <button><Link to={`/nameDrink/${search}`}><img src="./images/lupa.png" alt="" /> </Link></button>
         </li>
         <li className='liStyle'>
           <Link to={"/cart"} className='cartAStyle cartImage'>{CartWidget(cart)}</Link>

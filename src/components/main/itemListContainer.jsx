@@ -6,13 +6,15 @@ import {getDocs, collection, getFirestore, query, where, limit} from "firebase/f
 
 const ItemListContainer = () => {
     const category = useParams();
-    let [items, setItems] = useState(null)
+    const nameDrink = useParams()
+     let [items, setItems] = useState(null)
     let [visible, setVisible] = useState(10)
     const showMoreItems = ()=>{
       setVisible((prevValue) => {
         return prevValue + 5;
       })
     }
+    
     
 
       useEffect(() => { 
@@ -32,6 +34,24 @@ const ItemListContainer = () => {
                setItems(data) 
               })
            }
+           else if(nameDrink && nameDrink.name){
+            const db = getFirestore();
+            const docCollection = collection(db, "drinks_db")
+            const filteredCollection = query(
+              docCollection,
+              where("nameDrink","==", nameDrink.name),
+              limit(20)
+            )
+            getDocs(filteredCollection).then((snapshot)=>{
+              const data = snapshot.docs.map(doc=> (
+                {idFire: doc.id,
+                ...doc.data()}
+                ))
+             setItems(data) 
+            })
+         }
+
+
            else{
             const db = getFirestore();
             const docCollection = collection(db, "drinks_db")

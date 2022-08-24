@@ -253,6 +253,27 @@ li.dropdown:hover {
 .agregarAlCarrito{
   padding: 5px 0px;
 }
+.liInput{
+  align-self: center;
+  font-weight:bolder;
+}
+.liInput input{
+  color: #333;
+  font-weight:bolder;
+  border-radius: 5px;
+  font-size:small;
+  border: none;
+  width: 115px;
+  height: 20px;
+  margin: 0px 2px;
+}
+.liInput button{
+  background-color: #BB7F68;
+  border: none;
+}
+.liInput button img{
+  height: 18px;
+}
 .agregarAlCarrito button{
   border:none;
   padding: 10px;
