@@ -13,6 +13,7 @@ const ItemListContainer = () => {
         return prevValue + 5;
       })
     }
+    
 
       useEffect(() => { 
             if(category && category.id){
@@ -54,7 +55,8 @@ const ItemListContainer = () => {
           (<><div>
             <ItemList  items={items.slice(0, visible)} />  
             </div>
-            <div className="flex center LoadMoreButton"><button onClick={showMoreItems}>Load More</button></div>
+            {console.log(visible)}
+            {items.length === visible || items.length <= visible? "" : <div className="flex center LoadMoreButton"><button onClick={showMoreItems}>Load More</button></div>}
             </>)
           :
           <LoadingSpinner />
