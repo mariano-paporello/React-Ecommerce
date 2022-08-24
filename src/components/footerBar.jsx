@@ -25,7 +25,7 @@ const FooterBar = () => {
             
             </div>
            <div className="copyRightPart">
-            Copyright Corte Drinks - 2022. Todos los derechos reservados. Defensa de las y los consumidores.
+            Copyright Corte Drinks - 2022. All rights reserved. Defense of the consumers.   
            </div>
            <div className="ContactUsPart">
                 Contact Us: 
