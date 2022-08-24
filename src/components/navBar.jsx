@@ -5,7 +5,6 @@ import {Link} from "react-router-dom"
 const NavBar=() =>{
   const [search, setSearch] = useState(null)
  const  handleChange = e =>{
-    console.log(e.target.value)
     setSearch(e.target.value)
   }
   return (

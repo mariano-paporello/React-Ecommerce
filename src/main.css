@@ -258,7 +258,8 @@ li.dropdown:hover {
   font-weight:bolder;
 }
 .liInput input{
-  color: #333;
+  background-color: #F6E1DD;
+  color:#333;
   font-weight:bolder;
   border-radius: 5px;
   font-size:small;
